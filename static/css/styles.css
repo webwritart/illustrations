@@ -23,15 +23,15 @@ body {
 /* -------------------------------------------------------- HEADINGS ------------------------------------------------ */
 .heading-medium {
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 400;
 }
 .heading-small {
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 300;
 }
 .heading-large {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 400;
 }
 .heading-extra-large {
     font-size: 3.5rem;
@@ -69,6 +69,15 @@ body {
 .complete-profile {
     font-size: 2rem;
 }
+.whatsapp {
+    width: 80%;
+    background:green;
+    text-decoration: none;
+}
+.whatsapp:hover {
+    background:#2a5e14;
+    text-decoration: none;
+}
 /* --------------------------------------------------- FORMS-CONTAINERS --------------------------------------------- */
 .full-page-form-container {
     display: flex;
@@ -80,7 +89,7 @@ body {
 .full-page-form-container form {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 80%;
 }
 .default-form-container {
     display: flex;
@@ -100,7 +109,7 @@ body {
     color: #B27EB3;
     margin: 0.5% 0%;
 }
-.form-main input {
+.form-main input, textarea {
     background: #f8e3f9;
     border: 1px solid #e5bde6;
     color: #B27EB3;
@@ -132,7 +141,9 @@ body {
 .red-color {
     color: #d3333c;
 }
-
+.white-color {
+    color: #FFFFFF;
+}
 /* ----------------------------------------------------- NAVBAR ---------------------------------------------------- */
 
 header a, header a:hover {
@@ -149,13 +160,11 @@ header {
 #brand {
     font-weight: bold;
     font-size: 18px;
-    align-items: center;
-    width:  100%;
     display: flex;
+    align-items: center;
 }
 #brand a {
     color: white;
-    padding-right:2%;
 }
 ul {
     list-style: none;
@@ -284,5 +293,66 @@ ul li:hover {
     }
     #hamburger-icon {
         display: block;
+    }
+    .heading-large {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .full-page-form-container form {
+        width: 70%;
+    }
+    .whatsapp {
+        width: 70%;
+    }
+    .heading-large {
+        font-size: 1.7rem;
+        font-weight: 400;
+    }
+}
+@media only screen and (min-width: 900px) {
+    .heading-large {
+        font-size: 2.1rem;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .full-page-form-container form {
+        width: 50%;
+    }
+    .whatsapp {
+        width: 50%;
+    }
+    .heading-large {
+        font-size: 2.2rem;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .full-page-form-container form {
+        width: 40%;
+    }
+    .whatsapp {
+        width: 40%;
+    }
+    .heading-large {
+        font-size: 2.3rem;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (min-width: 2500px) {
+    .full-page-form-container form {
+        width: 30%;
+    }
+    .whatsapp {
+        width: 30%;
+    }
+    .heading-large {
+        font-size: 2.5rem;
+        font-weight: 400;
     }
 }
