@@ -1,6 +1,8 @@
 import datetime
 import os
-from extensions import db
+import random
+from captcha.image import ImageCaptcha
+import base64
 
 def calculate_age(birthdate):
     year, month, day = map(int, birthdate.split("-"))
@@ -38,3 +40,13 @@ def log(text, category):
 import_folder = '../static/files/users/Shwetabh1/artworks/'
 output_thumbnail_folder = '../static/files/users/Shwetabh1/artworks/thumbnail/'
 output_large_folder = '../static/files/users/Shwetabh1/artworks/large/'
+
+def generate_captcha():
+    captcha_num = str(random.randrange(100000, 999999))
+    img = ImageCaptcha()
+    captcha_io = img.generate(captcha_num)
+    binary_data = captcha_io.getvalue()
+    encoded_data_bytes = base64.b64encode(binary_data)
+    encoded_string = encoded_data_bytes.decode('utf-8')
+    captcha_uri = f"data:image/png;base64, {encoded_string}"
+    return captcha_num, captcha_uri
